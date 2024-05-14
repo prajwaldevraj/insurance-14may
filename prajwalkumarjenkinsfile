@@ -33,4 +33,4 @@ echo 'Creating a docker image from the package'
   }
 }
 
-}
+
