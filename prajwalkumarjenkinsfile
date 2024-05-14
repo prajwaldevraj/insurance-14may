@@ -2,3 +2,19 @@ pipeline {
 agent any
 
 tools {
+  maven 'M2_HOME'
+      }
+
+stages {
+   stage('Checkout') {
+    steps {
+      echo 'Checkout the source code from Github'
+        git 'https://github.com/prajwaldevraj/insurance-14may.git'
+          }
+    }
+stage('Package') {
+   steps {
+     echo'Create a Package'
+       sh 'mvn clean package'
+         }
+    }
