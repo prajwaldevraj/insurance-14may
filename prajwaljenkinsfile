@@ -10,8 +10,8 @@ pipeline {
        steps {
            echo 'Checkout he source code form Github'
              https://github.com/prajwaldevraj/insurance-14may.git
-             }
-        }       
+
+             
     stage('Package') {
        steps {
           echo 'Create a Package'
