@@ -43,9 +43,13 @@ stage('Push the Image') {
       sh 'docker push prajwal1602/insurance-14may:2.0'
                         }
          }
-   }
+stage('Deploy using Ansible') {
+  steps {
+    ansiblePlaybook disableHostKeyChecking: true, installation: 'ansible', inventory: '/etc/ansible/hosts', playbook: 'ansible.yml', vaultTmpPath: ''
+                              }
+        }
+    }
 }
-
 
   
 
