@@ -40,7 +40,7 @@ stage('Docker Login') {
       }
 stage('Push the Image') {
    steps {
-      sh 'docker push prajwal1602/insurance-14may:5.0'
+      sh 'docker push prajwaldevraj/insurance-14may:5.0'
                         }
          }
    }
